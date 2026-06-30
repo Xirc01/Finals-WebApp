@@ -7,6 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Enrollment extends Model
 {
-    /** @use HasFactory<\Database\Factories\EnrollmentFactory> */
+
+    protected $fillable =[
+        'userId',
+        'programId',
+        'coachCenrollmentDateontact',
+        'enrollmentStatus'
+    ];
+
+    /** @use HasFactory<\Database\Factories\MembershipPlanFactory> */
     use HasFactory;
 }

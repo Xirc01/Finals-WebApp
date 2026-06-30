@@ -7,6 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Program extends Model
 {
-    /** @use HasFactory<\Database\Factories\ProgramFactory> */
+
+    protected $fillable =[
+        'coachId',
+        'programName',
+        'programDescription',
+    ];
+
+    /** @use HasFactory<\Database\Factories\MembershipPlanFactory> */
     use HasFactory;
 }

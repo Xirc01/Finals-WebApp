@@ -15,28 +15,23 @@ return new class extends Migration
             $table->id();
         
             $table->foreignId('userId')
-                  ->constrained('user')
+                  ->constrained('users')
                   ->cascadeOnDelete();
         
             $table->string('paymentType');
         
-            $table->foreignId('membershipId')
-                  ->nullable()
-                  ->constrained('membership')
-                  ->nullOnDelete();
-        
             $table->foreignId('trainingFeeId')
                   ->nullable()
-                  ->constrained('training_fee')
+                  ->constrained('trainingFees')
                   ->nullOnDelete();
         
-            $table->decimal('amount',8,2);
+            $table->decimal('total',8,2);
         
             $table->date('paymentDate');
         
             $table->string('paymentMethod');
         
-            $table->string('status');
+            $table->string('paymentStatus');
         
             $table->timestamps();
         });

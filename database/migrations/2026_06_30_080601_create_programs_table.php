@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
         
             $table->foreignId('coachId')
-                  ->constrained('coach')
+                  ->constrained('coaches')
                   ->cascadeOnDelete();
         
             $table->string('programName');

@@ -15,15 +15,15 @@ return new class extends Migration
             $table->id();
         
             $table->foreignId('userId')
-                  ->constrained('user')
+                  ->constrained('users')
                   ->cascadeOnDelete();
         
             $table->foreignId('programId')
-                  ->constrained('program')
+                  ->constrained('programs')
                   ->cascadeOnDelete();
         
             $table->date('enrollmentDate');
-            $table->string('status');
+            $table->string('enrollmentStatus');
         
             $table->timestamps();
         });

@@ -7,6 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class TrainingFee extends Model
 {
-    /** @use HasFactory<\Database\Factories\TrainingFeeFactory> */
+
+    protected $fillable =[
+        'programId',
+        'trainingFee'
+    ];
+
+    /** @use HasFactory<\Database\Factories\MembershipPlanFactory> */
     use HasFactory;
 }

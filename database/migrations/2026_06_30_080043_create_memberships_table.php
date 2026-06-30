@@ -19,12 +19,12 @@ return new class extends Migration
                   ->cascadeOnDelete();
         
             $table->foreignId('membershipPlanId')
-                  ->constrained()
+                  ->constrained('membershipPlans')
                   ->cascadeOnDelete();
         
             $table->date('startDate');
             $table->date('endDate');
-            $table->string('status');
+            $table->string('membershipStatus');
         
             $table->timestamps();
         });
