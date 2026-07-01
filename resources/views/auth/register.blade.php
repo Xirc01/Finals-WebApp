@@ -20,18 +20,18 @@
 
         <!-- Contact Number -->
         <div class="mt-4">
-            <x-input-label for="contactNumber" :value="__('Contact Number')" />
-            <x-text-input id="contactNumber" class="block mt-1 w-full" type="text" name="contactNumber"
-                :value="old('contactNumber')" required autocomplete="tel" />
-            <x-input-error :messages="$errors->get('contactNumber')" class="mt-2" />
+            <x-input-label for="userContact" :value="__('Contact Number')" />
+            <x-text-input id="userContact" class="block mt-1 w-full" type="text" name="userContact"
+                :value="old('userContact')" required autocomplete="tel" />
+            <x-input-error :messages="$errors->get('userContact')" class="mt-2" />
         </div>
 
         <!-- Address -->
         <div class="mt-4">
-            <x-input-label for="address" :value="__('Address')" />
-            <x-text-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')"
-                required autocomplete="street-address" />
-            <x-input-error :messages="$errors->get('address')" class="mt-2" />
+            <x-input-label for="userAddress" :value="__('Address')" />
+            <x-text-input id="userAddress" class="block mt-1 w-full" type="text" name="userAddress" :value="old('userAddress')"
+                required autocomplete="street-userAddress" />
+            <x-input-error :messages="$errors->get('userAddress')" class="mt-2" />
         </div>
 
         <!-- Password -->
